@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fundo agora com um tom de roxo para aparecer um app de música */
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    /* vh = viewport height */
+    background-color: rgb(97, 36, 97);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.container .card {
+    position: relative;
+    width: 330px;
+    height: 450px;
+    /* Sombras ajustadas para um brilho sutil */
+    box-shadow: inset 5px 5px 5px rgba(149, 41, 217, 0.503), inset -5px -5px 15px rgba(119, 62, 225, 0.342), 5px 5px 15px rgba(239, 233, 119, 0.652);
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.container .card .box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: rgba(240, 231, 104, 0.863);
+    border: 3px solid #eeec7f;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transition: 0.5s;
+}
+
+/* Gradiente musical neon no hover (Roxo para o Amarelo) */
+.container .card:hover .box {
+    transform: translateX(-50px);
+    background: linear-gradient(45deg, #7f44afcc, #731b80a8);
+    box-shadow: 0 15px 35px rgba(177, 64, 230, 0.541);
+}
+
+.container .card .box .content {
+    padding: 60px;
+    text-align: center;
+}
+
+/* Estilização do ícone de musical */
+.container .card .box .content .icon {
+    font-size: 4em;
+    color: rgb(0, 0, 0);
+    /* Cor inicial preto */
+    margin-bottom: 30px;
+    transition: 0.5s;
+}
+
+/* No hover, o ícone fica "preto" para destacar no gradiente */
+.container .card:hover .box .content .icon {
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);
+}
+
+.container .card .box .content h2 {
+    position: absolute;
+    top: -20px;
+    right: 50px;
+    font-size: 7em;
+    color: rgba(255, 255, 255, 0.856);
+    pointer-events: none;
+}
+
+.container .card .box .content h3 {
+    font-size: 1.8em;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+.container .card .box .content p {
+    font-size: 0.9em;
+    font-weight: 490;
+    color: rgb(255, 255, 255);
+    line-height: 1.6;
+    transition: 0.5s;
+}
+
+.container .card:hover .box .content p {
+    color: rgba(238, 235, 235, 0.692)
+}
+
+/* Botão de play estilizado */
+.container .card .box .content a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px;
+    background: #3537b4b7;
+    /* Botão azul para contraste */
+    margin-top: 10px;
+    border-radius: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.container .card:hover .box .content a {
+    background: #eeec7f;
+    /* Muda para o Amarelo no hover */
+    color: rgb(0, 0, 0);
+    box-shadow: 0 5px 15px rgba(177, 64, 230, 0.541);
+}
+img{
+    padding: 5px;
+    width: 150px;
+    border-radius: 50%;
+}
